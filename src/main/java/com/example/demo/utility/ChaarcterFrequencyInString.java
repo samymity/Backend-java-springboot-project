@@ -20,7 +20,7 @@ public class  ChaarcterFrequencyInString {
 	
 		Map<Character, Long> map = s.chars()
 	            .mapToObj(c -> (char) c)
-	            .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+	            .collect(Collectors.groupingBy(c->c, Collectors.counting()));
         map.forEach((character, count) -> 
             System.out.println(character + ": " + count));
 		
